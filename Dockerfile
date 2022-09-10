@@ -8,5 +8,5 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0
 WORKDIR /app
 COPY --from=build /app ./
 
-EXPOSE 8080
+EXPOSE 5001
 ENTRYPOINT ["dotnet", "UserManager.dll"]

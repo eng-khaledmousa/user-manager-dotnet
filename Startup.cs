@@ -36,7 +36,7 @@ namespace UserManager
 
             services.AddSingleton<IMongoClient>(serviceProvider => {
                 var config = Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
-                Console.WriteLine($"connection string {config.ConnectionString}");
+                // Console.WriteLine($"connection string {config.ConnectionString}");
                 return new MongoClient(config.ConnectionString);
             });
             services.AddSingleton<IUserRepository, UserRepository>();
